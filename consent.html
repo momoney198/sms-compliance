@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><title>SMS Consent Flow — Mo Realty Group Trading Bot</title></head>
+<body style="font-family:sans-serif;max-width:720px;margin:2em auto;padding:1em;">
+<h1>SMS Consent Flow</h1>
+<p><strong>Recipient:</strong> Sole recipient is the account owner, who is also the developer and sole operator of this private trading software. No other persons are enrolled. No numbers are collected from any web form, list, or third party.</p>
+
+<h2>Step 1 — Operator runs the private CLI setup script on their own machine</h2>
+<pre style="background:#f4f4f4;padding:1em;border:1px solid #ccc;">
+$ ./setup_sms_alerts.py
+
+Mo Realty Group — Trading Bot SMS Alerts Setup
+-----------------------------------------------
+By entering your mobile number below, you consent to receive
+automated account-activity SMS alerts from your own trading
+software, sent ONLY to this number. Message frequency varies
+with trading activity. Msg &amp; data rates may apply. Reply STOP
+to unsubscribe, HELP for help. Privacy policy:
+https://momoney198.github.io/sms-compliance/privacy.html
+
+Enter mobile number to receive alerts (E.164, e.g. +15551234567):
+&gt; +1XXXXXXXXXX
+
+Confirm consent? [y/N]: y
+Consent recorded 2026-05-28 at 14:02 ET. Number stored locally only.
+</pre>
+
+<h2>Step 2 — Number is written to a local config file only</h2>
+<p>The number lives in the operator's local config (macOS Keychain). It is never transmitted anywhere except to Twilio's API for delivery of the operator's own alerts. No database, no server, no list.</p>
+
+<h2>No other opt-in paths exist</h2>
+<p>There is no web form, no SMS keyword opt-in, no purchased list, no affiliate, no third party. The only number that will ever receive messages on this campaign is the operator's own number, entered by the operator into their own machine.</p>
+</body></html>
