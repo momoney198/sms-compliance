@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<html><head><title>SMS Consent Flow — Mo Realty Group Trading Bot</title></head>
-<body style="font-family:sans-serif;max-width:720px;margin:2em auto;padding:1em;">
-<h1>SMS Consent Flow</h1>
-<p><strong>Recipient:</strong> Sole recipient is the account owner, who is also the developer and sole operator of this private trading software. No other persons are enrolled. No numbers are collected from any web form, list, or third party.</p>
+<html><head>
+<meta charset="utf-8">
+<title>SMS Opt-In Flow Screenshot — Mo Realty Group Trading Bot</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;max-width:820px;margin:2em auto;padding:1em;color:#222;line-height:1.5;">
 
-<h2>Step 1 — Operator runs the private CLI setup script on their own machine</h2>
-<pre style="background:#f4f4f4;padding:1em;border:1px solid #ccc;">
-$ ./setup_sms_alerts.py
+<h1>SMS Opt-In Flow — Hosted Screenshot for TCR Review</h1>
 
-Mo Realty Group — Trading Bot SMS Alerts Setup
------------------------------------------------
-By entering your mobile number below, you consent to receive
-automated account-activity SMS alerts from your own trading
-software, sent ONLY to this number. Message frequency varies
-with trading activity. Msg &amp; data rates may apply. Reply STOP
-to unsubscribe, HELP for help. Privacy policy:
-https://momoney198.github.io/sms-compliance/privacy.html
+<p><strong>Brand:</strong> Mo Realty Group<br>
+<strong>Use case:</strong> Private, self-notification trading-bot alerts<br>
+<strong>Recipient(s):</strong> One — the account owner, who is also the sole developer and operator of the software and the registrant of this A2P brand/campaign.</p>
 
-Enter mobile number to receive alerts (E.164, e.g. +15551234567):
-&gt; +1XXXXXXXXXX
+<p>There is no public-facing consumer website for this campaign because no consumers are enrolled. This page exists solely to give A2P 10DLC reviewers a verifiable view of the exact opt-in moment, as required by the Campaign Registry.</p>
 
-Confirm consent? [y/N]: y
-Consent recorded 2026-05-28 at 14:02 ET. Number stored locally only.
-</pre>
+<h2>The opt-in flow (screenshot)</h2>
 
-<h2>Step 2 — Number is written to a local config file only</h2>
-<p>The number lives in the operator's local config (macOS Keychain). It is never transmitted anywhere except to Twilio's API for delivery of the operator's own alerts. No database, no server, no list.</p>
+<p>The operator opts themselves in by running a private command-line setup script on their own Mac. The script displays the full consent disclosure (brand name, purpose, message frequency, msg &amp; data rates notice, STOP/HELP instructions, privacy policy URL) and prompts for the mobile number. A real screenshot of that session is below:</p>
+
+<p style="text-align:center;">
+  <img src="consent_screenshot.png"
+       alt="Screenshot of Terminal running setup_sms_alerts.py showing the full SMS consent disclosure, mobile-number prompt, and y/N confirmation."
+       style="max-width:100%;border:1px solid #ccc;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+</p>
+
+<h2>Exact consent language shown to the operator</h2>
+<blockquote style="border-left:4px solid #888;padding:0.5em 1em;background:#f7f7f7;">
+"By entering your mobile number below, you consent to receive automated account-activity SMS alerts from your own trading software, sent ONLY to this number. Message frequency varies with trading activity. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help.
+Privacy policy: <a href="privacy.html">https://momoney198.github.io/sms-compliance/privacy.html</a>
+Terms: <a href="sms-terms.html">https://momoney198.github.io/sms-compliance/sms-terms.html</a>"
+</blockquote>
+
+<h2>What happens after consent</h2>
+<p>The number is stored in the operator's local macOS Keychain. It is never transmitted anywhere except to Twilio's API for delivery of the operator's own alerts. There is no database, no server, no list, no third party.</p>
 
 <h2>No other opt-in paths exist</h2>
-<p>There is no web form, no SMS keyword opt-in, no purchased list, no affiliate, no third party. The only number that will ever receive messages on this campaign is the operator's own number, entered by the operator into their own machine.</p>
+<p>No web form. No SMS keyword opt-in. No purchased list. No affiliate. No third party. The only number that will ever receive messages on this campaign is the operator's own number, entered by the operator on their own machine through the screen shown above.</p>
+
+<hr>
+<p style="font-size:0.9em;color:#666;">Compliance documents:
+<a href="privacy.html">Privacy Policy</a> ·
+<a href="sms-terms.html">SMS Terms</a> ·
+Contact: mo.merheb@gmail.com</p>
+
 </body></html>
